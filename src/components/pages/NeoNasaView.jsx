@@ -7,6 +7,7 @@ import color from "../../styles/variables";
 
 // Components
 import GoogleChart from "../molecules/GoogleChart";
+import InputSelect from "../atoms/Input/InputSelect";
 
 const NeoNasaView = () => {
   // Init the state of data and set a loading
@@ -25,16 +26,29 @@ const NeoNasaView = () => {
     fetchdata();
   }, []);
 
-  console.log(data.near_earth_objects);
+  // const [search, setSearch] = useState("");
+  // const filter = useMemo(() => {
+  //   if (!search) return data.near_earth_objects;
+  //   return data.near_earth_objects.filter((d) => {
+  //     return d.close_approach_data[0].orbiting_body
+  //       .toLowerCase()
+  //       .includes(search.toLowerCase());
+  //   });
+  // }, [search, data.near_earth_objects]);
 
   return (
     <ViewContainer>
       {loading ? (
         <Loading>Loading...</Loading>
       ) : (
-        <ChartContainer>
-          <GoogleChart earthObjects={data.near_earth_objects} />
-        </ChartContainer>
+        <>
+          <ChartContainer>
+            <GoogleChart earthObjects={data.near_earth_objects} />
+          </ChartContainer>
+          <InputContainer>
+            <InputSelect options={data.near_earth_objects} />
+          </InputContainer>
+        </>
       )}
     </ViewContainer>
   );
@@ -51,6 +65,13 @@ const Loading = styled.h1`
 
 const ChartContainer = styled.div`
   background-color: ${color.blueNasa};
+`;
+
+const InputContainer = styled.div`
+  position: absolute;
+  top: 120px;
+  right: 10%;
+  width: 200px;
 `;
 
 export default NeoNasaView;

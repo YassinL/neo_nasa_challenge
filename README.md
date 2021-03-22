@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Projet "NASA's NeoWs Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Lien du repertoire : [https://github.com/YassinL/neo_nasa_challenge]
 
-## Available Scripts
+## Informations générales
 
-In the project directory, you can run:
+"Nasa's NeoWs Challenge" est un projet Front-End de création d'une app pour visualiser les données de l'API Nasa's Neows réalisé en React.
 
-### `npm start`
+## Fonctionnalités à réaliser
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **création d'une app react**
+- **Récupérer les données de l'API NASA's**
+- **Afficher les données dans un graphique en utilisant Google Charts**
+- **Ajouter un input select pour filtrer les données du graphique**
+- **Ajouter une vue sous forme de table de données avec un sélecteur pouvant switcher le graphique et la table**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies
 
-### `npm test`
+Liste (non exhaustive) des technologies et packages utilisés :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [React](https://www.npmjs.com/package/react) : v 17.0.1
+- [Node](https://nodejs.org/en/) : v 14.15.1
+- [Style-component](https://www.npmjs.com/package/styled-components) : v 5.2.1
+- [ESLint](https://www.npmjs.com/package/eslint) : v 7.15.0
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom) : v 5.2.0
+- [prop-types](https://www.npmjs.com/package/prop-types) : v 15.7.2
+- [react-google-charts](https://www.npmjs.com/package/react-google-charts) : v 3.0.15
 
-### `npm run build`
+## Démarrer le projet
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Dans un terminal, exécuter ces lignes :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`$ git clone https://github.com/Lucasbeneston/goweb_store`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`$ cd ../path/to/the/file`
 
-### `npm run eject`
+`$ npm install`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`$ npm start`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Architecture
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+--- **.src**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+&emsp; |--- **/components** : _Ensemble des composants_
 
-## Learn More
+&emsp; &emsp; |--- **/atoms** : _Composants individuels de petites tailles_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+&emsp; &emsp; &emsp; &emsp;|--- **/Inputs** : \_Composants d'inputs de type "select"
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+&emsp; &emsp; &emsp; &emsp;|--- **/SVG** : _Fichiers SVG (Logo ou symboles)_
 
-### Code Splitting
+&emsp; &emsp; |--- **/molecules** : _Composants moyens (groupement d'atoms) tel que le Google Charts_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+&emsp; &emsp; &emsp; &emsp;|--- **/GoogleCharts** : _Composant du graphqiue_
 
-### Analyzing the Bundle Size
+&emsp; &emsp; |--- **/organisms** : _Composants fonctionnels (groupement de molécules / atomes)_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+&emsp; &emsp; &emsp; &emsp;|--- **/Header** : _Composant du Header_
 
-### Making a Progressive Web App
+&emsp; &emsp; &emsp; &emsp;|--- **/Footer** : _Composant du Footer_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+&emsp; &emsp; |--- **/pages** : _Composants des vues de l'application (groupement de molécules)_
 
-### Advanced Configuration
+&emsp; &emsp; &emsp; &emsp;|--- **/NeoNasaView** : _Page d'accueil affichant les différentes fonctionnalités_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+&emsp; |--- **/styles** : _Ensemble des composants pour afficher le style avec style components_
 
-### Deployment
+&emsp; &emsp; |--- **/base** : _Gère les styles de base du fichier (body, font-size, ...)_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+&emsp; &emsp; |--- **/brekpoints** : _Gère la partie responsive (media queries)_
 
-### `npm run build` fails to minify
+&emsp; &emsp; |--- **/index** : _Regroupe Base et ResetCSS pour la globalité de l'app_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+&emsp; &emsp; |--- **/resetCSS** : _remise à zéro des styles par défaut des navigateurs_
+
+&emsp; &emsp; |--- **/variables** : _Liste des variables (couleurs)_
+
+--- **App.jsx** : _Point d'entrée d'application qui représente l'architecture HTML du body_
+
+--- **Index.jsx** : _Fichier qui fait le lien entre "App.jsx" et "index.html"_

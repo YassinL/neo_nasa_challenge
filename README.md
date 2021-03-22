@@ -4,7 +4,7 @@ Lien du repertoire : [https://github.com/YassinL/neo_nasa_challenge]
 
 ## Informations générales
 
-"Nasa's NeoWs Challenge" est un projet Front-End de création d'une app pour visualiser les données de l'API Nasa's Neows réalisé en React.
+"Nasa's NeoWs Challenge" est un projet Front-End de création d'une app pour visualiser les données de l'API Nasa's Neows réalisé en React. Comme demandés ce projet est une onepage.
 
 ## Fonctionnalités à réaliser
 

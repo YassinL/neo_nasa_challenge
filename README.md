@@ -30,7 +30,7 @@ Liste (non exhaustive) des technologies et packages utilisés :
 
 Dans un terminal, exécuter ces lignes :
 
-`$ git clone https://github.com/Lucasbeneston/goweb_store`
+`$ git clone https://github.com/YassinL/neo_nasa_challenge.git`
 
 `$ cd ../path/to/the/file`
 
